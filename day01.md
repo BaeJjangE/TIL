@@ -20,3 +20,5 @@
 - 설치
 - 기본사용법
 test
+
+test - local
