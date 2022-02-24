@@ -28,10 +28,11 @@
 
 ## 깃(Git)
 - 깃허브(Github)
+  - 기본 명령어
 
 ## 마크다운(Markdown)
 - Typora
-
+  - 기본 사용법
 ## 개발환경
 - Jupyter Notebook
 - Visual Studio Code
