@@ -1,5 +1,5 @@
 # Today I Learned(TIL) Wiki
----
+
 
 ## 프론트 엔드(Front End)
 - HTML
@@ -14,9 +14,17 @@
 - 라이브러리(Library)
  - Numpy
  - Pandas
+ - TensorFlow[예정]
+ - sklearn[예정]
 - 프레임워크(Framework)
+ - Django[예정]
+
+## 데이터베이스(DataBase)[예정]
+- MySQL
 
 ## 통계학(Statistics)
+
+## 프로젝트(Project)[예정]
 
 ## 깃(Git)
 - 깃허브(Github)
