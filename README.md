@@ -2,7 +2,7 @@
 
 
 ## 프론트 엔드(Front End)
-- [HTML](https://github.com/BaeJjangE/TIL/blob/master/day01.md)
+- HTML
 - CSS
 
 ## 운영체제(OS)
