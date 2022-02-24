@@ -24,7 +24,7 @@
 ## 마크다운(Markdown)
 - Typora
 
-## Edit
+## 개발환경
 - Jupyter Notebook
 - Visual Studio Code
 
