@@ -32,7 +32,7 @@
 
 ## 마크다운(Markdown)
 - Typora
-  - 기본 사용법
+  - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Markdown/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%20%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 ## 개발환경
 - Jupyter Notebook
 - Visual Studio Code
