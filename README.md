@@ -15,9 +15,16 @@
  - Numpy
  - Pandas
 
+## 통계학(Statistics)
+
 ## 깃(Git)
 - 깃허브(Github)
 
 ## 마크다운(Markdown)
+- Typora
 
-## 통계학(Statistics)
+## Edit
+- Jupyter Notebook
+- Visual Studio Code
+
+
