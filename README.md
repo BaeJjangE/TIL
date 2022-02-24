@@ -14,6 +14,7 @@
 - 라이브러리(Library)
  - Numpy
  - Pandas
+- 프레임워크(Framework)
 
 ## 통계학(Statistics)
 
