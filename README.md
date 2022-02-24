@@ -28,7 +28,7 @@
 
 ## 깃(Git)
 - 깃허브(Github)
-  - 기본 명령어
+  - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Git%26Github/Git_Github%20%EA%B8%B0%EB%B3%B8%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 ## 마크다운(Markdown)
 - Typora
