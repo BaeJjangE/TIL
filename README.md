@@ -26,6 +26,7 @@
 
 ## 데이터베이스(DataBase)[예정]
 - MySQL
+- Microsoft Excel
 
 ## 통계학(Statistics)
 
