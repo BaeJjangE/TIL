@@ -7,7 +7,7 @@
 ## 운영체제(OS)
 - Linux
   - Oracle VM VirtualBox & CentOS 7 설치 및 설정
-  - Linux 명령어[네트워크]
+  - [Linux 명령어[네트워크]](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EB%AA%85%EB%A0%B9%EC%96%B4%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D.md)
   - Linux 기본 명령어
   - Linux 중급 명령어
   - Linux 고급 명령어
