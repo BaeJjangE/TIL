@@ -19,9 +19,10 @@
 - 라이브러리(Library)
   - Numpy
   - Pandas
-  - TensorFlow[예정]
+  - matplotlib
   - sklearn[예정]
 - 프레임워크(Framework)
+  - TensorFlow[예정]
   - Django[예정]
 
 ## 데이터베이스(DataBase)[예정]
