@@ -57,6 +57,10 @@ git commit -m "commit message"
 git log
 git log --oneline  # 한줄로 보기 옵션
 git log -p  # 커밋마다 차이 보기 옵션
+
+# 해쉬값(코드번호)으로 어떤 부분이 수정되었는지 확인가능
+1. git log --oneline # 해쉬값 보기위해 사용
+2. git diff commit코드번호1 commit코드번호2
 ```
 
 ### 2. remote
@@ -108,17 +112,20 @@ git branch
 git branch [branch name]
 
 # 특정 브랜치 삭제
-git branch -d [branch name]
+git branch -d [branch name]  # 일반 삭제
 git branch -D [branch name]  # 강제 삭제(병합되지 않은 브랜치도 삭제)
 
 git switch [branch name]  # 다른 브랜치로 이동
-git switch -c [branch name]  # 브랜치를 생성함과 동시에 이동
+git switch -c [branch name]  # 브랜치를 생성함과 동시에 해당 브랜치로 이동
 
 # 한 줄로, 모든 브랜치의, 그래프를 포함하여 커밋 목록 출력
-git log --oneline --all --graph
+git log --oneline --all --graph # 실무에서 자주 사용할 것 같음
 
-# 브랜치 병합
-git merge [branch name]
+# 브랜치 병합: 브랜치끼리 합치는게 아님
+git merge [branch name] 
+# 중심이되는 branch 위치에서 합칠 branch 이름을 적는 것
+# 합쳐진 branch는 삭제하면 됨
+
 ```
 
 ---
@@ -129,7 +136,7 @@ git merge [branch name]
 
 ## .gitignore 파일
 
-touch .gitignore 으로 만든 파일안에 깃으로 관리하고싶지 않은 파일명을 넣으면 제외된다.
+- touch .gitignore 으로 만든 파일안에 깃으로 관리하고싶지 않은 파일명을 넣으면 제외된다.
 
 ### .gitignore 파일 사용을 편하게 해줄 사이트
 
@@ -143,13 +150,22 @@ https://www.toptal.com/developers/gitignore
 
 ## README.md 
 
-README.md 파일을 만들어서 Github repository 에 보내면 Wiki로 만들 수 있다.
+- README.md 파일을 만들어서 Github repository 에 보내면 목차 또는 Wiki로 만들 수 있다.
+
+
+
+## 협업 시 Conflict 발생 시
+
+1.  git push origin master 할 때 rejected 오류 발생
+2.  git pull origin master로 자료를 받아옴
+3. 같은 행에서 내용이 겹칠 시 3가지 선택 사항 중 선택해라고 나옴
+4. 선택하고 git add . > git commit -m "메시지" > git push origin master 하면 끝.
 
 
 
 ## 팁
 
-깃허브에서는 파일들 수정하지말기
+- 깃허브에서는 파일들 수정하지말기
 
-
+- branch switch 전에는 파일들 확인하기?
 
