@@ -20,10 +20,14 @@
   - Numpy
   - Pandas
   - matplotlib
-  - sklearn[예정]
+  - sklearn
+  - scipy
+  - statsmodels
 - 프레임워크(Framework)
   - TensorFlow[예정]
   - Django[예정]
+
+## Tableau[예정]
 
 ## 데이터베이스(DataBase)[예정]
 - MySQL
