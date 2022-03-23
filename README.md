@@ -24,7 +24,9 @@
   - scipy
   - statsmodels
 - 프레임워크(Framework)
+  - Pytorch[예정]
   - TensorFlow[예정]
+   - Keras[예정]
   - Django[예정]
 
 ## Tableau[예정]
@@ -32,6 +34,7 @@
 ## 데이터베이스(DataBase)[예정]
 - MySQL
 - Microsoft Excel
+- MongoDB
 
 ## 통계학(Statistics)
 
