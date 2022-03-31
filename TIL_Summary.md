@@ -1,5 +1,34 @@
 # Today I Learn Summary
 
+2022-03-31
+
+```markdown
+### Tensorflow
+- Convolution Neural Network
+
+### Data Analysis
+- 실습(중급)
+ - 주성분 분석(PCA)
+ 
+### 국가기술 빅데이터 분석기사
+- 분석 결과 활용
+```
+
+2022-03-30
+
+```markdown
+### Tensorflow
+- mnist 모델
+- and, or, xor 모델
+
+### Data Analysis
+- 실습(중급)
+ - 추천: 연관성 분석
+ 
+### 국가기술 빅데이터 분석기사
+- 분석결과 시각화
+```
+
 2022-03-29
 
 ```markdown
