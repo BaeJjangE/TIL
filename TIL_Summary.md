@@ -1,5 +1,31 @@
 # Today I Learn Summary
 
+2022-04-02
+
+```markdown
+### Data Analysis
+- 실습(중급)
+ - 실전 문제 2
+ 
+### 국가기술 빅데이터 분석기사
+- 빅데이터 분석 계획 : 분석 방안 수립, 분석 작업 계획, 데이터 수집 및 저장 계획, 데이터 전처리
+```
+
+2022-04-01
+
+```markdown
+### Tensorflow
+- fashion_mnist
+- Tensorflow Hub
+- TimeSeries Data Prediction : RNN
+
+### Data Analysis
+- 실습(중급)
+ - 실전 문제 1
+ 
+### 국가기술 빅데이터 분석기사
+- 빅데이터의 이해 : 빅데이터 개요 및 활용, 빅데이터 기술 및 제도
+```
 2022-03-31
 
 ```markdown
