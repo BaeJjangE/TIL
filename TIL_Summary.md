@@ -1,5 +1,16 @@
 # Today I Learn Summary
 
+2022-04-03
+
+```markdown
+### Data Analysis
+- 실습(중급)
+ - 실전 문제 3
+ 
+### 국가기술 빅데이터 분석기사
+- 빅데이터 탐색 : 데이터 탐색, 통계기법 이해
+```
+
 2022-04-02
 
 ```markdown
