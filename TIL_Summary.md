@@ -1,5 +1,15 @@
 # Today I Learn Summary
 
+2022-04-04
+
+```markdown
+### Tensorflow
+- LSTM, GRU
+
+### 국가기술 빅데이터 분석기사
+- 빅데이터 모델링 : 분석절차수립, 분석환경구축, 분석기법, 고급분석기법
+```
+
 2022-04-03
 
 ```markdown
