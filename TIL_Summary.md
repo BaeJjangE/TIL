@@ -1,5 +1,16 @@
 # Today I Learn Summary
 
+2022-04-05
+
+```markdown
+### Tensorflow
+- LSTM, GRU, LSTM_sigmoid, LSTM+GRU
+- 주가 분석
+
+### 국가기술 빅데이터 분석기사
+- 빅데이터 결과해석 : 분석모형 평가, 분석모형 개선, 분석결과 해석, 분석결과 시각화
+```
+
 2022-04-04
 
 ```markdown
