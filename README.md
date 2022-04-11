@@ -23,12 +23,11 @@
   - sklearn
   - scipy
   - statsmodels
-- 프레임워크(Framework)
+  - TensorFlow[공부중]
+  - Keras[공부중]
   - Pytorch[예정]
-  - TensorFlow[예정]
-   - Keras[예정]
-  - Django[예정]
-
+  - seaborn
+  
 ## Tableau[예정]
 
 ## 데이터베이스(DataBase)[예정]
