@@ -1,5 +1,18 @@
 # Today I Learn Summary
 
+2022-04-12
+
+```markdown
+### Tensorflow
+- 비지도 학습 : VAE, GAN
+
+### SQL
+- 생활코딩 : 데이터베이스의 목적
+
+### 데이터 분석
+- 탐색적 데이터 분석 Exploratory Data Analysis
+- 데이터 전처리, 품질, 기법 Data Preprocessing, Quality, Techniques
+```
 2022-04-11
 
 ```markdown

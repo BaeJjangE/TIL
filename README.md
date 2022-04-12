@@ -26,7 +26,7 @@
   - TensorFlow[공부중]
   - Keras[공부중]
   - Pytorch[예정]
-  - seaborn
+  - seaborn[예정]
   
 ## Tableau[예정]
 
