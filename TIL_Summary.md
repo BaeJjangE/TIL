@@ -1,5 +1,24 @@
 # Today I Learn Summary
 
+2022-04-13
+
+```markdown
+### 머신 러닝
+- sklearn linear_Regression
+- 모델 성능 평가
+- ML lec 01 - 기본적인 Machine Learning 의 용어와 개념 설명
+- [TensorFlow] Lec-02-Simple Liner Regression
+
+### SQL
+- 입문자를 위한 머신러닝 튜토리얼
+- 시험환경에서 정당한 컨닝페이퍼 만들기 Guide
+- 판다스 통계 함수 간단 정리
+
+### 데이터 분석
+- 실제 엑셀 데이터 전처리 쉽게하기! (python / data / pandas)
+
+```
+
 2022-04-12
 
 ```markdown
