@@ -1,5 +1,18 @@
 # Today I Learn Summary
 
+2022-04-14
+
+```markdown
+### 머신 러닝
+- classification, GridSearchCV, SVM, 앙상블 학습
+- [TensorFlow] Lec-03 Liner Regression and How to minimize cost
+- [TensorFlow] Lab-03 Liner Regression and How to minimize cost LAB
+
+### [큐레이팅# 플러스]최적의 코딩을 결정하는 기본 알고리즘
+- 더 빠른 정렬 알고리즘: 퀵 정렬과 계수 정렬
+- 정렬 알고리즘 비교 및 기초 문제 풀이
+```
+
 2022-04-13
 
 ```markdown
@@ -16,7 +29,6 @@
 
 ### 데이터 분석
 - 실제 엑셀 데이터 전처리 쉽게하기! (python / data / pandas)
-
 ```
 
 2022-04-12
