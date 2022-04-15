@@ -1,9 +1,23 @@
 # Today I Learn Summary
 
+2022-04-15
+
+```markdown
+### 통계학 & 머신러닝
+- Linear Regression, Logistic Regression
+- 암 재발 예측 모델 만들기
+
+### 딥러닝
+- [TensorFlow] Lec-04 Multi variable linear regression
+
+### 빅데이터 분석 실기
+- [Tutorial🔥] T1 2회 기출유형 Python
+```
+
 2022-04-14
 
 ```markdown
-### 머신 러닝
+### 머신 러닝 & 딥러닝
 - classification, GridSearchCV, SVM, 앙상블 학습
 - [TensorFlow] Lec-03 Liner Regression and How to minimize cost
 - [TensorFlow] Lab-03 Liner Regression and How to minimize cost LAB
