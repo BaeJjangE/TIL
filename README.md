@@ -8,7 +8,6 @@
 
 
 ## 프론트 엔드(Front End)
-
 - HTML
 - CSS
 
@@ -21,7 +20,7 @@
   - [Linux 고급 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B3%A0%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
 ## 네트워크(Network)
-- Network[기본]
+- [Network의 기본](https://github.com/BaeJjangE/TIL/blob/master/Network/Network(%EA%B8%B0%EB%B3%B8).md)
 
 ## 파이썬(Python)
 - 라이브러리(Library)[공부중]
