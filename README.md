@@ -47,7 +47,10 @@
   - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Markdown/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%20%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 ## 인터넷 강의
-- [ProDS(초급+중급)](https://github.com/BaeJjangE/TIL/tree/master/ProDS_practical_training)
+- [멀티캠퍼스][ProDS]데이터 분석 이론(초급+중급)[완강]
+- [[멀티캠퍼스][ProDS]파이썬(Python)을 활용한 데이터 분석 실습(초급+중급)[완강]](https://github.com/BaeJjangE/TIL/tree/master/ProDS_practical_training)
+- [멀티캠퍼스][큐레이팅# 플러스]최적의 코딩을 결정하는 기본 알고리즘[학습중]
+- [멀티캠퍼스]빅데이터가 별건가, 알고 보면 쉬운 통계상식[학습중]
 
 ## 개발환경
 - Google Colaboratory
