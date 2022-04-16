@@ -1,11 +1,14 @@
-# Today I Learned(TIL) Wiki
+# Today I Learned(TIL) Wiki 
+🔥**To be happy today, to do my best today**🔥
+
+<br>
 
 ## 프론트 엔드(Front End)
 - HTML
 - CSS
 
 ## 운영체제(OS)
-- Linux
+- [Linux](https://github.com/BaeJjangE/TIL/tree/master/Linux)
   - [Oracle VM VirtualBox & CentOS 7 설치 및 설정](https://github.com/BaeJjangE/TIL/blob/master/Linux/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0(Oracle%20VM%20VirtualBox)%20%26%20CentOS%207%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%84%A4%EC%A0%95.md)
   - [Linux 명령어[네트워크]](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EB%AA%85%EB%A0%B9%EC%96%B4%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D.md)
   - [Linux 기본 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
@@ -13,15 +16,16 @@
   - [Linux 고급 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B3%A0%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
 ## 네트워크(Network)
+- Network[기본]
 
 ## 파이썬(Python)
 - 라이브러리(Library)[공부중]
   - Numpy[공부중]
   - Pandas[공부중]
-  - matplotlib[공부중]
-  - sklearn[공부중]
-  - scipy[공부중]
-  - statsmodels[공부중]
+  - matplotlib
+  - sklearn
+  - scipy
+  - statsmodels
   - TensorFlow[공부중]
   - Keras[공부중]
   - Pytorch[예정]
@@ -57,5 +61,4 @@
 - Visual Studio Code
 - Spyder
 - Jupyter Notebook
-
 
