@@ -1,5 +1,20 @@
 # Today I Learn Summary
+2022-04-16
 
+```markdown
+### 통계학 & 머신러닝
+- 
+
+### 딥러닝
+- [TensorFlow] Lab-04 Multi variable linear regression LAB
+- [TensorFlow] Lab-05-1 Logistic Regression
+
+### 빅데이터 분석 실기
+- 
+
+### 코딩
+- CodeUp 기초 1~40번 문제
+```
 2022-04-15
 
 ```markdown
