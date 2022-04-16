@@ -10,8 +10,7 @@
   - [Linux 명령어[네트워크]](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EB%AA%85%EB%A0%B9%EC%96%B4%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D.md)
   - [Linux 기본 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
   - [Linux 중급 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EC%A4%91%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
-  - Linux 고급 명령어
-
+  - [Linux 고급 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B3%A0%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
 ## 네트워크(Network)
 
@@ -46,8 +45,14 @@
 ## 마크다운(Markdown)
 - Typora
   - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Markdown/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%20%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95.md)
+
+## 인터넷 강의
+- [ProDS(초급+중급)](https://github.com/BaeJjangE/TIL/tree/master/ProDS_practical_training)
+
 ## 개발환경
-- Jupyter Notebook
+- Google Colaboratory
 - Visual Studio Code
+- Spyder
+- Jupyter Notebook
 
 
