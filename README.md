@@ -12,7 +12,7 @@
 - CSS
 
 ## 운영체제(OS)
-- [Linux](https://github.com/BaeJjangE/TIL/tree/master/Linux)
+- Linux
   - [Oracle VM VirtualBox & CentOS 7 설치 및 설정](https://github.com/BaeJjangE/TIL/blob/master/Linux/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0(Oracle%20VM%20VirtualBox)%20%26%20CentOS%207%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%84%A4%EC%A0%95.md)
   - [Linux 명령어[네트워크]](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EB%AA%85%EB%A0%B9%EC%96%B4%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D.md)
   - [Linux 기본 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
@@ -35,7 +35,8 @@
   - Pytorch[예정]
   - seaborn[예정]
   
-## Tableau[예정]
+## BI(Business Intelligence) Tool
+- Tableau[예정]
 
 ## 데이터베이스(DataBase)[예정]
 - MySQL
