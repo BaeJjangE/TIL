@@ -15,13 +15,13 @@
 ## 네트워크(Network)
 
 ## 파이썬(Python)
-- 라이브러리(Library)
-  - Numpy
-  - Pandas
-  - matplotlib
-  - sklearn
-  - scipy
-  - statsmodels
+- 라이브러리(Library)[공부중]
+  - Numpy[공부중]
+  - Pandas[공부중]
+  - matplotlib[공부중]
+  - sklearn[공부중]
+  - scipy[공부중]
+  - statsmodels[공부중]
   - TensorFlow[공부중]
   - Keras[공부중]
   - Pytorch[예정]
