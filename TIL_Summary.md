@@ -1,19 +1,28 @@
 # Today I Learn Summary
+2022-04-17
+
+```markdown
+### 딥러닝
+- [TensorFlow] Lab-05-2 Logistic Regression
+- [TensorFlow] Lab-05-3 Logistic Regression
+
+### 코딩
+- CodeUp 기초 41~60번 풀기
+```
+
 2022-04-16
 
 ```markdown
-### 통계학 & 머신러닝
-- 
-
 ### 딥러닝
 - [TensorFlow] Lab-04 Multi variable linear regression LAB
 - [TensorFlow] Lab-05-1 Logistic Regression
 
-### 빅데이터 분석 실기
-- 
-
 ### 코딩
 - CodeUp 기초 1~40번 문제
+- 프로그래머스 2022 KAKAO BLIND RECRUITMENT > 신고 결과 받기 LV1 : 실패
+
+## 통계학
+- (deep)자유도, 분산, 편차, 표준편차
 ```
 2022-04-15
 
