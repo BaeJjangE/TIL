@@ -1,4 +1,18 @@
 # Today I Learn Summary
+2022-04-18
+
+```markdown
+### 데이터 분석
+- 데이터 유형별 시각화 방법 및 이론
+
+### 딥러닝
+- ML lec 6-1 - Softmax Regression: 기본 개념 소개
+- ML lec 6-2: Softmax classifier 의 cost함수
+
+### 코딩
+- CodeUp 기초 61~64번 풀기
+```
+
 2022-04-17
 
 ```markdown
