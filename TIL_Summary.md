@@ -1,4 +1,14 @@
 # Today I Learn Summary
+2022-04-20
+
+```markdown
+### 머신러닝 & 딥러닝
+- linear, logistic, callback 분석 실습
+
+### 코딩
+-  CodeUp 기초 68~70번 풀기
+```
+
 2022-04-19
 
 ```markdown
