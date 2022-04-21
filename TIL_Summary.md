@@ -1,4 +1,18 @@
 # Today I Learn Summary
+2022-04-21
+
+```markdown
+### 머신러닝 & 딥러닝
+- 오토인코더, GAN, RNN, LSTM, GRU
+
+### 코딩
+-  CodeUp 기초 71~80번 풀기
+
+### 통계학
+- 평균의 함정
+- 수식없는 우도 최대우도추정법 MLE
+```
+
 2022-04-20
 
 ```markdown
