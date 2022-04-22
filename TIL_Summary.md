@@ -1,4 +1,14 @@
 # Today I Learn Summary
+2022-04-22
+
+```markdown
+### 머신러닝 & 딥러닝
+- RNN, NLP(자연어처리)
+
+### 통계학
+- 퍼센트를 조심하라
+```
+
 2022-04-21
 
 ```markdown
