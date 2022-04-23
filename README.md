@@ -12,7 +12,7 @@
 - CSS
 
 ## 운영체제(OS)
-- Linux
+### Linux
   - [Oracle VM VirtualBox & CentOS 7 설치 및 설정](https://github.com/BaeJjangE/TIL/blob/master/Linux/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0(Oracle%20VM%20VirtualBox)%20%26%20CentOS%207%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%84%A4%EC%A0%95.md)
   - [Linux 명령어[네트워크]](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EB%AA%85%EB%A0%B9%EC%96%B4%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D.md)
   - [Linux 기본 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
@@ -23,16 +23,22 @@
 - [Basic of Network](https://github.com/BaeJjangE/TIL/blob/master/Network/Network(%EA%B8%B0%EB%B3%B8).md)
 
 ## 파이썬(Python)
-- 라이브러리(Library)[공부중]
-  - Numpy[공부중]
-  - Pandas[공부중]
-  - matplotlib
+### 라이브러리(Library)
+- Numpy
+- Pandas
+
+#### 머신러닝 라이브러리(Machine Learing Library)
   - sklearn
   - scipy
   - statsmodels
+    
+#### 딥러닝 라이브러리(Deep Learning Library)
   - TensorFlow[공부중]
   - Keras[공부중]
   - Pytorch[예정]
+
+#### 시각화 라이브러리(Visualizatuon Library)
+  - matplotlib[공부중]
   - seaborn[예정]
   
 ## BI(Business Intelligence) Tool
@@ -47,14 +53,6 @@
 
 ## 프로젝트(Project)[예정]
 
-## 깃(Git)
-- 깃허브(Github)
-  - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Git%26Github/Git_Github%20%EA%B8%B0%EB%B3%B8%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
-
-## 마크다운(Markdown)
-- Typora
-  - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Markdown/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%20%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95.md)
-
 ## 인터넷 강의
 - [멀티캠퍼스] [ProDS]데이터 분석 이론(초급+중급)[완강]
 - [[멀티캠퍼스] [ProDS]파이썬(Python)을 활용한 데이터 분석 실습(초급+중급)[완강]](https://github.com/BaeJjangE/TIL/tree/master/ProDS_practical_training)
@@ -62,6 +60,14 @@
 - [멀티캠퍼스] 빅데이터가 별건가, 알고 보면 쉬운 통계상식[학습중]
 - [유튜브] 모두를 위한 딥러닝 시즌2 - TensorFlow[학습중]
 - [유튜브] [실무]Pandas 데이터 전처리[학습중]
+
+## 깃(Git)
+- 깃허브(Github)
+  - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Git%26Github/Git_Github%20%EA%B8%B0%EB%B3%B8%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
+
+## 마크다운(Markdown)
+- Typora
+  - [기본 사용법](https://github.com/BaeJjangE/TIL/blob/master/Markdown/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%20%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 ## 개발환경
 - Google Colaboratory
