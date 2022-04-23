@@ -3,9 +3,11 @@
 
 ```markdown
 ### 빅데이터 분석기사 실기 준비
+- T1. Exercise / 예시문제 (dataq 공식 예제)
+- [py] T1-1. 이상치를 찾아라(IQR활용) Expected Questions
 
 ### 머신러닝 & 딥러닝
-- 
+- [TensorFlow] Lab-06-1 Softmax Classifier
 
 ### 통계학
 - 시각화의 오용과 남용
