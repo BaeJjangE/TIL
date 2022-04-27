@@ -1,4 +1,20 @@
 # Today I Learn Summary
+2022-04-27
+
+```markdown
+### 빅분기 실기
+- T1-3. 결측치 처리(map 활용)
+
+### 머신러닝, 딥러닝
+- CensorData 분석, Regularization_Linear 분석
+
+### 통계학
+- 상관관계는 인과관계가 아니다
+
+### 코딩
+-  CodeUp 기초 98번 풀기
+```
+
 2022-04-26
 
 ```markdown
