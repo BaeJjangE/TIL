@@ -1,4 +1,22 @@
 # Today I Learn Summary
+2022-04-28
+
+```markdown
+### 빅분기 실기
+- T1-4. Skewness and Kurtosis (Log Scale) / #왜도 #첨도 #로그스케일
+
+### 머신러닝, 딥러닝
+- 12가지 머신러닝 한번에 가장 좋은 모델 찾기
+- UMAP
+- WSL : 우분투
+
+### 통계학
+- 비교, 어떻게 해야 할까?
+
+### 코딩
+-  그리디 기초 문제 풀기
+```
+
 2022-04-27
 
 ```markdown
