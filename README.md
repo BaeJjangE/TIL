@@ -11,6 +11,8 @@
 - HTML
 - CSS
 
+<br>
+
 ## 운영체제(OS)
 ### Linux
   - [Oracle VM VirtualBox & CentOS 7 설치 및 설정](https://github.com/BaeJjangE/TIL/blob/master/Linux/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0(Oracle%20VM%20VirtualBox)%20%26%20CentOS%207%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%84%A4%EC%A0%95.md)
@@ -19,10 +21,16 @@
   - [Linux 중급 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EC%A4%91%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
   - [Linux 고급 명령어](https://github.com/BaeJjangE/TIL/blob/master/Linux/Linux%20%EA%B3%A0%EA%B8%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
+<br>
+
 ## 네트워크(Network)
+
 - [Basic of Network](https://github.com/BaeJjangE/TIL/blob/master/Network/Network(%EA%B8%B0%EB%B3%B8).md)
 
+<br>
+
 ## 파이썬(Python)
+
 ### 라이브러리(Library)
 - Numpy
 - Pandas
@@ -40,7 +48,7 @@
 #### 시각화 라이브러리(Visualizatuon Library)
   - matplotlib[공부중]
   - seaborn[예정]
-  
+
 ## BI(Business Intelligence) Tool
 - Tableau[예정]
 
