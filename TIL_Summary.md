@@ -1,4 +1,11 @@
 # Today I Learn Summary
+2022-05-16
+
+```markdown
+### 세미 프로젝트
+- 데이콘 대회 완성
+```
+
 2022-05-15
 
 ```markdown
