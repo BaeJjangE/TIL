@@ -1,0 +1,35 @@
+*내장함수
+# 2차 리스트 정렬 가능
+array = [('홍길동', 35), ('이순신', 75)]
+sorted(리스트 등, key=lambda x: x[1])
+
+* itertools
+import itertools import permutations # 순열 구하기: 순서고려 o
+데이터 = ['A', 'B', 'C']
+result = list(permutations(데이터, 3) )
+
+import itertools import product # 2개 뽑는 모든 순열 구하기(중복 허용)
+데이터 = ['A', 'B', 'C']
+result = list(product(데이터, repeat=2) )
+
+import itertools import combinations # 조합 구하기: 순서고려 x
+데이터 = ['A', 'B', 'C']
+result = list(combinations(데이터, 2) )
+
+import itertools import combinations_with_replacement # 2개 뽑는 모든 조합 구하기(중복 허용)
+데이터 = ['A', 'B', 'C']
+result = list(product(데이터, 2) )
+
+* collections
+from collections import Counter # 리스트 내 단어의 등장 횟수를 세는 기능 제공
+counter = Counter([1,2,3,4,5,1,1,1,1,1,1]) # 문자도 가능
+print(counter[1]) # 1이 등장한 횟수 출력
+print(dict(counter)) # 사전 자료형으로 반환!!! ex) {1: 7, 2:1, 3:1, 4:1, 5:1}
+
+
+* math
+import math
+math.gcd() # 최대 공약수 계산
+
+def lcm(a, b): # 최소 공배수 계산
+	return a *b // math.gcd(a,b)
