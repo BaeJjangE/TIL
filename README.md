@@ -68,7 +68,8 @@
 
 <br>
 
-## 프로젝트(Project)[예정]
+## 프로젝트(Project)
+- [DACON [Computer Vision 이상치 탐지 알고리즘 경진대회]](https://github.com/BaeJjangE/TIL/tree/master/%EB%8D%B0%EC%9D%B4%EC%BD%98_%EC%9D%B4%EC%83%81%EC%B9%98%ED%83%90%EC%A7%80)
 
 <br>
 
