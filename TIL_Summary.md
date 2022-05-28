@@ -1,4 +1,17 @@
 # Today I Learn Summary
+2022-05-28
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트 이상치, 결측치 처리(KNN Imputation)
+
+### 빅분기 실기
+- T2-3. Adult Census Income Tutorial
+
+### 코딩
+- 다양한 동적 계획법 문제 풀이(개미전사)
+```
+
 2022-05-27
 
 ```markdown
@@ -6,10 +19,10 @@
 - 2022 날씨 빅데이터 콘테스트 이상치, 결측치 처리(KNN Imputation)
 
 ### 빅분기 실기
-- 
+- T2-3. Adult Census Income Tutorial
 
 ### 코딩
-- 
+- 다양한 동적 계획법 문제 풀이
 ```
 
 2022-05-26
