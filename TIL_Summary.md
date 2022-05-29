@@ -1,4 +1,17 @@
 # Today I Learn Summary
+2022-05-29
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트
+
+### 빅분기 실기
+- Insurance_Starter
+
+### 코딩
+- day027_인강_1로만들기
+```
+
 2022-05-28
 
 ```markdown
