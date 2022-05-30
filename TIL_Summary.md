@@ -1,4 +1,14 @@
 # Today I Learn Summary
+2022-05-30
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트 pca, pycaret
+
+### 코딩
+- day028_인강_화폐최소로사용하기
+```
+
 2022-05-29
 
 ```markdown
