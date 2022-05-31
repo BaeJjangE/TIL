@@ -1,4 +1,17 @@
 # Today I Learn Summary
+2022-05-31
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트 xgboost, ExtraTreesRegressor
+
+### 빅분기 실기
+- T1 2회 기출유형
+
+### 코딩
+- 금광
+```
+
 2022-05-30
 
 ```markdown
@@ -16,7 +29,7 @@
 - 2022 날씨 빅데이터 콘테스트
 
 ### 빅분기 실기
-- Insurance_Starter
+- T2-5. Insurance Forecast
 
 ### 코딩
 - day027_인강_1로만들기
