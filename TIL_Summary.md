@@ -1,4 +1,19 @@
 # Today I Learn Summary
+2022-06-03
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트 논문 등의 변수 설정ㄴ
+
+### 빅분기 실기
+- T1-3. Missing data / #결측치 #삭제 #중앙 #평균
+- T1-4. Skewness and Kurtosis (Log Scale) / #왜도 #첨도 #로그스케일
+
+### 코딩
+- Dynamic Programing boj 계단 오르기
+- Dynamic Programing boj 2xn 타일링
+```
+
 2022-06-02
 
 ```markdown
