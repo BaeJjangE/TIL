@@ -6,7 +6,8 @@
 - 2022 날씨 빅데이터 콘테스트
 
 ### 빅분기 실기
-- 
+- T1-7. Replace / #값변경 #조건 #최대값
+- T1-8. Cumulative Sum / #누적합 #결측치 #보간
 
 ### 코딩
 - day032_boj_1931_회의실배정
@@ -19,7 +20,8 @@
 - 2022 날씨 빅데이터 콘테스트
 
 ### 빅분기 실기
-- 
+- T1-5. Standard deviation / #표준편차
+- T1-6. Groupby Sum / #결측치 #조건
 
 ### 코딩
 - Dynamic Programing boj 퇴사2
