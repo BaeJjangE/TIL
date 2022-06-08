@@ -1,12 +1,30 @@
 # Today I Learn Summary
+2022-06-08
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트 xgboost 사용
+
+### 빅분기 실기
+- 
+
+### 코딩
+- day035_boj_1946_신입사원
+
+### My SQL
+- 이수안 컴퓨터 연구소(유튜브)
+ - MySQL 데이터베이스 한번에 끝내기 SQL Full Tutorial Course using MySQL Database
+```
+
 2022-06-07
 
 ```markdown
 ### 최종 프로젝트
-- 2022 날씨 빅데이터 콘테스트
+- 2022 날씨 빅데이터 콘테스트 변수새로선정, Extra tree
 
 ### 빅분기 실기
-- 
+- T1-11. min-max scaling / #스케일링 #상하위값
+- T1-12. top10-bottom10 / #그룹핑 #정렬 #상하위값
 
 ### 코딩
 - day034_boj_1463_1로만들기
