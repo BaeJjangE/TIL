@@ -1,5 +1,5 @@
 # Today I Learn Summary
-2022-06-08
+2022-06-09
 
 ```markdown
 ### 최종 프로젝트
@@ -7,6 +7,24 @@
 
 ### 빅분기 실기
 - 
+
+### 코딩
+- 
+
+### My SQL
+- 이수안 컴퓨터 연구소(유튜브)
+ - MySQL 데이터베이스 한번에 끝내기 SQL Full Tutorial Course using MySQL Database
+```
+
+2022-06-08
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트 xgboost 사용
+
+### 빅분기 실기
+- T1-13. Correlation / #상관관계
+- T1-14. Multi Index & Groupby / #멀티인덱스 #정렬 #인덱스리셋 #상위값
 
 ### 코딩
 - day035_boj_1946_신입사원
