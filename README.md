@@ -56,15 +56,11 @@
 
 <br>
 
-## 데이터베이스(DataBase)[예정]
+## 데이터베이스(DataBase)
 
-- MySQL
-- Microsoft Excel
-- MongoDB
-
-<br>
-
-## 통계학(Statistics)
+- MySQL[공부중]
+- Microsoft Excel[예정]
+- MongoDB[예정]
 
 <br>
 
