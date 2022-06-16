@@ -1,0 +1,99 @@
+import time
+import random
+import os
+
+# 작업 시작 메세지를 출력
+print("작업을 시작합니다.")
+
+# 시작 지점의 시간을 기록
+start_time = time.time()
+
+# 파일의 갯수를 지정
+FILE_NUMBER = 100
+
+# 이메일 생성에 사용할 샘플 글자 정의
+alphabet_samples = "abcdefghijklmnopqrstuvwxyz1234567890"
+
+# 이름 샘플 지정
+first_name_samples = "이정최임김지장정허안황유고조박원오신전"
+middle_name_samples = "재세진소광정영인태정지"
+last_name_samples = "헌영석진열수신서환재혜"
+
+# 나이와 핸드폰 번호 생성에 사용할 샘플 번호 정의
+int_samples = "1234567890"
+
+# 무작위로 선택된 영어 글자를 생성하는 함수
+def random_string(length):
+    result = ""
+    for i in range(length):
+        # result = result + random.choice(alphabet_samples)
+        result +=random.choice(alphabet_samples)
+    return result
+
+# 무작위 사람 이름을 생성하는 함수
+def random_name():
+    result = ""
+    result += random.choice(first_name_samples)
+    result += random.choice(middle_name_samples)
+    result += random.choice(last_name_samples)
+    return result
+
+# 무작위로 선택된 숫자(문자열 형태)를 생성하는 함수
+def random_int(length):
+    result = ""
+    for i in range(length):
+        result +=random.choice(int_samples)
+    return result
+
+# 결과물을 저장할 폴더 생성
+folder = "샘플_폴더"
+if folder not in os.listdir():
+    os.mkdir(folder)
+
+# 헤더 정의(맨 윗 행에 들어갈 내용)
+header = ",".join(["name", "age", "email", "division", "telephone", "sex"]) + "\n"
+
+# 개인정보 파일을 csv 파일로 자동 생성
+# FILE_NUMBER 수만큼 반복해서 생성
+for i in range(FILE_NUMBER):
+    
+    # 무작위 사람 이름 생성
+    name = random_name()
+    
+    # 파일 이름 정의
+    filename = "샘플_폴더/" + str(i) + "_" + name + ".csv"
+    # ex) 샘플_폴더/0_이재헌.csv
+    
+    # 작성할 파일을 생성(빈파일 생성)
+    outfile = open(filename, "w")
+    
+    # 파일에 헤더 기재(첫번째 행)
+    outfile.write(header)
+    
+    # 파일에 이름 기재(두번째 행)
+    outfile.write(name + ",")
+    
+    # 파일에 무작위로 나이를 기재
+    outfile.write(random_int(2) +",")
+    
+    # 파일에 무작위로 이메일 기재
+    outfile.write(random_string(8) + "@gmail.com" + ",")
+    
+    # 파일에 무작위로 부서 기재
+    outfile.write(random_string(3) + ",")
+    
+    # 파일에 무작위로 핸드폰 번호 기재
+    outfile.write("010-" + random_int(4) + "-" + random_int(4) + ",")
+    
+    # 파일에 무작위로 성별 기재
+    outfile.write(random.choice(["남", "여"]))
+    
+    # 파일 수정 마무리
+    outfile.close()
+    
+# 작업 종료 메세지를 출력
+print("작업이 끝났습니다.")
+
+# 시작 지점의 시간을 기록
+end_time = time.time()
+print("작업 시간이 " + str(end_time - start_time) + "초 걸렸습니다.")

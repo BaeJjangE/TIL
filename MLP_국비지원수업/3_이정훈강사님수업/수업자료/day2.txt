@@ -1,0 +1,29 @@
+논문 학술 검색
+구글 스칼라 : scholar.google.com
+http://compbio.sookmyung.ac.kr/~journal/ : 해당 저널 이름을 검색에 넣으면
+sci-hub : 유료 인 경우 공짜로 볼 수 있는 사이트
+
+논문 순서
+제목 읽고
+1. ABSTRACT
+어떤 목적, 이유로 이걸 했고 어떤 실험을 했고 어떤결과가 나왔다 < 이렇게 요약만 보고 넘어가면된다. 더 궁금하면 아래를 더본다
+
+특허도 중요하다
+
+시각화
+flaticon.com : 아이콘 다운, ppt만들때라든지 필요하면 써야함
+
+연속형으로 인식하는 명목형 변수를 범주형으로 바꿔줄 때
+Gender_SR = Gender_SR.astype("category")
+
+Vector : 1차원, 같은 변수
+Matrix : 2차원, 같은 변수
+DataFrame : 2차원, 서로 다른 변수(각 column은 동일한 타입으로 구성, 파이썬에서는 예외 가능)
+List : 무한차원이 가능, 타입 상관없음
+
+Matrix는 melt해줘서 DataFrame으로 바꿔줘야 시각화하기 편하다
+
+
+
+
+

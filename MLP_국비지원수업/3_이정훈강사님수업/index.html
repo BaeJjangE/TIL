@@ -1,0 +1,45 @@
+<!--https://api.jquery.com/click/-->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>calc flask demo</title>
+  <!-- Jquery 라이브러리 호출 -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<!-- text input 창 만들기 -->
+<input type="text" id="PatientID" name="inputdata"></input>
+<!-- 버튼: 버튼id = btn1 -->
+<button id="btn1">submit</button>
+
+<!-- 최종 결과가 나오는 PatientResult -->
+<br><br>
+<span class="points-text" id="PatientResult"></span>
+
+<script>
+// 'request'라는 id를 가진 버튼 클릭 시 실행.
+$("#btn1").click(function(){
+	// json 형식으로 데이터 set
+
+    // 버튼 id로부터 값 가져오기
+    var id = $("#PatientID").val()
+	$.ajax({
+		type : 'GET',
+		url : 'http://127.0.0.1:5000/getPatientInfo?id=' + id,		
+		success : function(result){
+            document.getElementById('PatientResult').innerHTML = result;
+		},
+		error: function(xhr, ajaxOptions, thrownError){
+            alert("Error: " + xhr.status);
+        },
+	});
+});
+
+</script> 
+</body>
+</html>
+
+
+	

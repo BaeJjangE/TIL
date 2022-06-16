@@ -1,0 +1,13 @@
+이정훈 강사님 사용하는 개발환경
+VS code
+Nodepad++ < 거쳐가는 것
+MS Excel < 거쳐가는 것
+MS PowerPoint < 거쳐가는 것
+Python-> ipython -> Jupter notebook
+R gui (Rstudio 진짜 싫어함)
+
+RGui(분석한 표) -> notepad++(컬럼은 \t, 띄어쓰기 두칸을 한칸으로 변경 후) -> excel에 붙여넣고 원하는대로 수정 -> ppt에 넣기
+\n : 줄바꿈, \t: 탭, \r\n: 줄바꿈을 ' '띄어쓰기로 변경할 때
+띄어쓰기 2개를 1개로 변경 ->띄어쓰기를 탭으로 변경 후 엑셀에 붙여넣기(표)
+RGui(분석한 그래프) -> ppt에 붙여넣기
+WSL : 리눅스용 윈도우 내 우분투

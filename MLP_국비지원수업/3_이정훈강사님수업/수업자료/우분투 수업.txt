@@ -1,0 +1,26 @@
+# command창 띄우기
+시작: 시작키 + R -> cmd
+# ubuntu bash shell 띄우기 (윈도우 explorer)
+$ bash
+# 파이썬 설치
+$ sudo apt-get install python-is-python3
+# 웹서버 apache 설치
+$ sudo apt-get install apache2
+# 웹서버 구동 시작
+$ sudo service apache2 start
+# 웹서버 구동 확인
+$ sudo service apache2 status
+->  * apache2 is running
+# 웹 브라우저, http://127.0.0.1/ http://localhost/
+# apache의 첫 페이지
+$ cd /var/www/html #cd: change directory
+$ ls -al # ls
+#현재 working directory의 파일 목록 보기, # -a: 상세내용 -l: 디렉토리 리스팅
+# 디렉토리 권한 설정
+sudo chmod 777 /var/www/html #웹서버 최상위 디렉토리 권한 변경
+cat > test.html
+########
+Please click here to move my blog<br>
+########
+ctrl + c
+http://localhost/test.html (같은의미: http://127.0.0.1/test.html)

@@ -1,0 +1,61 @@
+머신러닝 함수
+*assign -> dataframe
+# ind라는 컬럼에 train이라는 값을 다 채워줌: 한번에 묶어줘서 처리할때 사용
+ex) all_df = pd.concat([X_train.assign(ind="train"), X_test.assign(ind="test")])
+
+*apply -> 시리즈로 빼서 하나씩 변환시켜줌?
+ex) 1. df.apply(lambda x:np.square(x) if x.name in ['A','B'] else x)
+     2. X_train[cat_features] = X_train[cat_features].apply(le.fit_transform)
+
+*get_dummies
+ex) X_train = pd.get_dummies(X_train, columns = categorical변수)
+     X_test = pd.get_dummies(X_test, columns = 카테고리칼변수)
+
+*select_dtypes: 오브젝트만 선택해서 dataframe으로 보여줌
+ex) X_train.select_dtypes("object").columns
+
+* np.log1p: hist()그래프에서 왼쪽으로 치우친 모양을 중앙으로
+ex) y_train['charges'] = np.log1p(y_train['charges'])
+
+*numpy
+올림: np.ceil()
+내림: np.floor()
+버림: np.trunc()
+
+*f1 결측치 city별 중앙값으로 대체
+df['f1'] = df['f1'].fillna(df['city'].map({'서울':s,'경기':k,'부산':b,'대구':d}))
+
+*# 'SalePrice'컬럼 log1p 로그변환
+df['SalePrice'] = np.log1p(df['SalePrice'])
+
+*왜도-df["컬럼"].skew() (비대칭성을 나타내는 지표:음수-왼쪽긴꼬리, 0-평균==중앙값, 양수-오른쪽 긴꼬리), 
+ 첨도-df["컬럼"].kurt() (<3: 정규분포보다 얇음, 3: 정규분포, 3<: 정규분포보다 두꺼움)
+
+*replace: 컬럼에 a를 b로 변경
+df.replace(a, b)
+
+*# 'f1'데이터 여-존슨 yeo-johnson 값 구하기
+from sklearn.preprocessing import power_transform
+df['y'] = power_transform(df[['f1']],standardize=False) # method 디폴트 값은 여-존슨’yeo-johnson’
+# box-cox
+df['b'] = power_transform(df[['f1']], method='box-cox')
+
+* df2.sort_values(by='ratio', ascending = False)
+
+* to_datetime
+df['dayofweek'] = df['Date'].dt.dayofweek: 0~6, 월~일 순서
+df['weekend'] = df['dayofweek'].apply(lambda x: x>=5, 1, 0)
+
+* np.where
+df["Sales2"] = np.where(df["Events"]==1, df["Sales"]*0.8, df["Sales"])
+
+* dropna(subset=['컬럼이름']): 원하는 컬럼 기준으로 제거
+df = df.dropna(subset=['r2'])
+
+* pd.qcut()
+df['새로생성컬럼'] = pd.qcut(df['age'], q=3, labels=['group1','group2','group3']) # labels 생략가능
+
+*resample('W', '2W', 'M', +Y, M, D, H, T(min), S 등) 
+df['Date'] = pd.to_datetime(df['Date'])
+df = df.set_index('Date')
+df2 = df.resample('W').sum() # datetime 데이터를 주간단위로 합계 분류
