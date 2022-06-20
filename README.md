@@ -34,11 +34,13 @@
   - seaborn[공부중]
 
 <br>
+
 ## 데이터베이스(DataBase)
 
 - MySQL[공부중]
 - Microsoft Excel[공부중]
 - MongoDB[예정]
+
 <br>
 
 ## BI(Business Intelligence) Tool
