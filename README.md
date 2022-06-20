@@ -5,7 +5,48 @@
 
 ---
 
+<br>
 
+## 프로젝트(Project)
+- [DACON[Computer Vision Outlier Detection Algorithm Contest]](https://github.com/BaeJjangE/TIL/tree/master/%EB%8D%B0%EC%9D%B4%EC%BD%98_%EC%9D%B4%EC%83%81%EC%B9%98%ED%83%90%EC%A7%80)
+- Meteorological Agency[Weather Big Data Contest]
+
+<br>
+
+## 파이썬(Python)
+
+### 라이브러리(Library)
+- Numpy
+- Pandas
+
+#### 머신러닝 라이브러리(Machine Learing Library)
+  - sklearn
+  - scipy
+  - statsmodels
+    
+#### 딥러닝 라이브러리(Deep Learning Library)
+  - TensorFlow
+  - Keras
+  - Pytorch[예정]
+
+#### 시각화 라이브러리(Visualizatuon Library)
+  - matplotlib[공부중]
+  - seaborn[공부중]
+
+<br>
+## 데이터베이스(DataBase)
+
+- MySQL[공부중]
+- Microsoft Excel[공부중]
+- MongoDB[예정]
+<br>
+
+## BI(Business Intelligence) Tool
+
+- Power BI[예정]
+- Tableau[예정]
+
+<br>
 
 ## 프론트 엔드(Front End)
 - HTML
@@ -28,54 +69,12 @@
 
 <br>
 
-## 파이썬(Python)
-
-### 라이브러리(Library)
-- Numpy
-- Pandas
-
-#### 머신러닝 라이브러리(Machine Learing Library)
-  - sklearn
-  - scipy
-  - statsmodels
-    
-#### 딥러닝 라이브러리(Deep Learning Library)
-  - TensorFlow[공부중]
-  - Keras[공부중]
-  - Pytorch[예정]
-
-#### 시각화 라이브러리(Visualizatuon Library)
-  - matplotlib[공부중]
-  - seaborn[예정]
-
-<br>
-
-## BI(Business Intelligence) Tool
-
-- Tableau[예정]
-
-<br>
-
-## 데이터베이스(DataBase)
-
-- MySQL[공부중]
-- Microsoft Excel[예정]
-- MongoDB[예정]
-
-<br>
-
-## 프로젝트(Project)
-- [DACON[Computer Vision 이상치 탐지 알고리즘 경진대회]](https://github.com/BaeJjangE/TIL/tree/master/%EB%8D%B0%EC%9D%B4%EC%BD%98_%EC%9D%B4%EC%83%81%EC%B9%98%ED%83%90%EC%A7%80)
-
-<br>
-
 ## 인터넷 강의
 
 - **[멀티캠퍼스] [ProDS]데이터 분석 이론(초급+중급)[완강]**
 - **[[멀티캠퍼스] [ProDS]파이썬(Python)을 활용한 데이터 분석 실습(초급+중급)[완강]](https://github.com/BaeJjangE/TIL/tree/master/ProDS_practical_training)**
-- [멀티캠퍼스] [큐레이팅# 플러스]최적의 코딩을 결정하는 기본 알고리즘[학습중]
+- **[멀티캠퍼스] [큐레이팅# 플러스]최적의 코딩을 결정하는 기본 알고리즘[완강]**
 - **[멀티캠퍼스] 빅데이터가 별건가, 알고 보면 쉬운 통계상식[완강]**
-- [유튜브] 모두를 위한 딥러닝 시즌2 - TensorFlow[학습중]
 - [유튜브] [실무]Pandas 데이터 전처리[학습중]
 
 <br>
@@ -100,4 +99,5 @@
 - Visual Studio Code
 - Spyder
 - Jupyter Notebook
+- AWS V-Lab
 
