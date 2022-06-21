@@ -1,4 +1,17 @@
 # Today I Learn Summary
+2022-06-21
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트
+
+### 빅분기 실기
+- T2-1. Titanic (Classification) / 타이타닉
+
+### Power BI
+- mavenkorea) 현업을 위한 데이터 분석 및 시각화 솔루션, 파워 BI 웨비나 & 데모
+```
+
 2022-06-20
 
 ```markdown
