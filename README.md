@@ -19,17 +19,18 @@
 - Numpy
 - Pandas
 
-#### 머신러닝 라이브러리(Machine Learing Library)
+#### - 머신러닝 라이브러리(Machine Learing Library)
+
   - sklearn
   - scipy
   - statsmodels
     
-#### 딥러닝 라이브러리(Deep Learning Library)
+#### - 딥러닝 라이브러리(Deep Learning Library)
   - TensorFlow
   - Keras
   - Pytorch[예정]
 
-#### 시각화 라이브러리(Visualizatuon Library)
+#### - 시각화 라이브러리(Visualizatuon Library)
   - matplotlib[공부중]
   - seaborn[공부중]
 
