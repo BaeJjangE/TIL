@@ -1,4 +1,22 @@
 # Today I Learn Summary
+2022-06-23
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트
+
+### 포트폴리오 작성
+
+### 빅분기 실기
+- T2-3. Adult Census Income (Classification) / 성인 인구소득 예측
+
+### Excel
+- 오빠두엑셀)피벗테이블을 제대로 활용하는 숨은 비법! - 파워피벗 실전 예제 | 여러 시트를 실시간으로 비교하는 보고서
+
+### MySQL
+- 얄팍한 코딩사전)왕초보용! 갖고 노는 MySQL 데이터베이스 강좌 1-2. 각종 연산자들
+```
+
 2022-06-22
 
 ```markdown
@@ -8,7 +26,7 @@
 ### 포트폴리오 작성
 
 ### 빅분기 실기
-- 
+- T2-2. Pima Indians Diabetes (Classification) / 당뇨병
 
 ### Excel
 - 기본 사용법 복습

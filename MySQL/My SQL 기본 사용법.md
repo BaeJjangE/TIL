@@ -1,21 +1,37 @@
 # My SQL 기본 사용법
 
+## 추천 사이트
+
+```mysql
+1. 얄팍한 코딩사전
+https://www.yalco.kr/@sql/1-1/
+```
+
 ## 기본
 
 ```mysql
-;
+1. ;
 - 쿼리문 끝에 ';' 적어줘야 쿼리문이 끝났다는 뜻
 
-*(에스터리스크)
+2. *(에스터리스크)
 - 전체를 뜻함
 
-쿼리문 블럭씌우면 그것만 실행가능
+3 .쿼리문 블럭씌우면 그것만 실행가능
 
-as 원하는이름
+4. as 원하는이름
 - 컬럼 이름 설정
+
+5. 주석달기
+-- 주석달기
+긴 주석 달기
+/*
+내용1
+내용2
+*/
+
 ```
 
-## 명령어
+## 조회
 
 ```mysql
 # SHOW DATABASES
@@ -37,7 +53,37 @@ as 원하는이름
 # SELECT 컬럼이름(전체: *) FROM 테이블이름
 - 테이블로부터 원하는 컬럼들을 다 보여달라
 
-# Where
+# ★SELECT CASE WHEN
+- 가공해서 조회
+ex)
+select case when 컬럼명 <= 100000 then '10만이하'
+			when 컬럼명 <= 200000 then '20만이하'
+			else '20만 초과' end as P2, 붙이고싶은컬럼명(보통같은컬럼)
+from city;
+
+# ★substr()
+- 글자 추출
+ex)
+select 
+substr(컬럼이름, 1) as 이름1, -- 첫글자부터 추출
+substr(컬럼이름, -1) as 이름_1, -- 맨 끝 글자 추출
+substr(컬럼이름, 2, 1) as 이름2, -- 2번째글자부터 1개
+substr(컬럼이름, 2, 2) as 이름3 -- 2번째글자부터 2개
+from 테이블명;
+
+# concat
+- 컬럼 value값, 직접 입력값 합치기
+ex) 2개 컬럼 합치기
+select 
+concat(컬럼이름1, 컬럼이름2) as 생성할컬럼이름
+from 테이블;
+ex) 3개 합치기
+select 
+concat(Name, CountryCode) as 이름이랑코드,
+concat(Name, '원하는텍스트', CountryCode) as 3개넣기
+from city;
+
+# WHERE
 SELECT 컬럼이름 FROM 테이블이름 WHERE 조건
 - 조회한 결과에 특정한 조건으로 원하는 데이터만 보고 싶을 때 사용
 ex)
@@ -131,7 +177,7 @@ ex)
 select *
 from city
 order by Population Desc
-Limit 10
+Limit 0, 10 -- 0부터 10개까지, 만약 30, 10으로 쓰면 30부터 10개 출력
 
 # GROUP BY
 - 그룹으로 묶어주는 역할
@@ -409,8 +455,8 @@ ex) drop view testview
 - 테이블 이름 다음에 나오는 열 생략 가능
 - 생략할 경우에 value 다음에 나오는 값들의 순서 및 개수가 테이블이 컬럼 수와 같아야함
 ex)
-insert into 테이블명
-value(1, 123, 1.1, "test");
+insert into 테이블명(컬럼이름1, 컬럼이름2, ..., 컬럼이름n)
+value(값1, 값2, 값3, 값4);
 - workbench에서는 직접 표에 값넣고 apply 버튼 눌러줘도 됨
 
 # insert into select
@@ -447,4 +493,6 @@ truncate table test2;
 # drop database
 - 데이터베이스 삭제
 ```
+
+
 

@@ -7,7 +7,7 @@ ex) all_df = pd.concat([X_train.assign(ind="train"), X_test.assign(ind="test")])
 ex) 1. df.apply(lambda x:np.square(x) if x.name in ['A','B'] else x)
      2. X_train[cat_features] = X_train[cat_features].apply(le.fit_transform)
 
-*get_dummies
+*get_dummies -> LabelEncoder 대신 사용하는 경우: 1, 2, 3 으로 나오고 관계를 1+2=3으로 학습 -> 그러므로 이러한 관계가 아닐 경우 사용
 ex) X_train = pd.get_dummies(X_train, columns = categorical변수)
      X_test = pd.get_dummies(X_test, columns = 카테고리칼변수)
 
@@ -59,3 +59,59 @@ df['새로생성컬럼'] = pd.qcut(df['age'], q=3, labels=['group1','group2','gr
 df['Date'] = pd.to_datetime(df['Date'])
 df = df.set_index('Date')
 df2 = df.resample('W').sum() # datetime 데이터를 주간단위로 합계 분류
+
+* shift(): 시차생성
+df["새로생성할컬럼"] = df["시차생성할컬럼"].shift(1) # 1일 후 시차만들기
+
+* 이상치 처리
+# IQR방식 기준점
+Q1 = df['age'].quantile(.25)
+Q3 = df['age'].quantile(.75)
+IQR = Q3 - Q1
+min_iqr = Q1-1.5*IQR
+max_iqr = Q3+1.5*IQR
+print(min_iqr, max_iqr)
+
+# 표준편차*1.5 방식 기준점
+std = df['age'].std() * 1.5
+mean = df['age'].mean()
+min_out = mean - std
+max_out = mean + std
+print(min_out, max_out)
+
+* 라벨인코딩
+from sklearn.preprocessing import LabelEncoder
+cols = df.select_dtypes(include="object").columns
+le = LabelEncoder()
+for col in cols:
+    df[col] = le.fit_transform(df[col])
+
+* y가 0과 1값 분류 일 때, 0~1사이 값으로 표현하고 싶을 경우
+from sklearn.tree import DecisionTreeClassifier
+model = DecisionTreeClassifier(random_state=2022)
+model.fit(X_train, y_train)
+pred = model.predict_proba(X_val)
+★ 평가 -> pred[:,1]
+from sklearn.metrics import roc_auc_score
+roc_auc_score(y_val, pred[:,1])
+
+* describe(exclude="object") or describe(include="object")
+df.describe(exclude="object") <- 오브젝트 type 제외
+df.describe(include="object") <- 오브젝트 type 포함
+
+* index를 이용하여 행 제거
+del1 = X_train[X_train.Glucose==0].index
+del2 = X_train[X_train.BloodPressure==0].index
+del3 = X_train[X_train.BMI==0].index
+try:
+    X_train.drop(del1, axis=0, inplace=True)
+    X_train.drop(del2, axis=0, inplace=True)
+    X_train.drop(del3, axis=0, inplace=True)
+except:
+    pass
+try:
+    y_train.drop(del1, axis=0, inplace=True)
+    y_train.drop(del2, axis=0, inplace=True)
+    y_train.drop(del3, axis=0, inplace=True)
+except:
+    pass
