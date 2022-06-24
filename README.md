@@ -38,15 +38,14 @@
 
 ## 데이터베이스(DataBase)
 
-- MySQL[공부중]
-- Microsoft Excel[공부중]
-- MongoDB[예정]
+- [MySQL](https://github.com/BaeJjangE/TIL/tree/master/MySQL)[공부중]
+- [Microsoft Excel](https://github.com/BaeJjangE/TIL/tree/master/Excel)[공부중]
 
 <br>
 
 ## BI(Business Intelligence) Tool
 
-- Power BI[예정]
+- Power BI[공부중]
 - Tableau[예정]
 
 <br>

@@ -232,14 +232,36 @@ join countrylanguage on city.CountryCode = countrylanguage.CountryCode;
 ### 문자열
 
 ```mysql
-# length()
-- 전달받은 문자열의 길이를 반환
+# length(): 전달받은 문자열의 바이트 길이를 반환, CHAR_LENGTH():문자열의 문자 길이
 ex)
-select length('asdfewfe')
+SELECT
+  LENGTH('안녕하세요'), -- 15
+  CHAR_LENGTH('안녕하세요'), -- 5
+  CHARACTER_LENGTH('안녕하세요'); -- 5
 
 # concat()
 - 전달받은 문자열을 모두 결합하여 하나의 문자열로 반환
 - 전달받은 문자열 중 하나라도 null이 존재하면 null 반환
+ex)
+CONCAT('HELLO', ' ', 'THIS IS ', 2021)
+-- HELLO THIS IS 2021
+ex)
+SELECT CONCAT('원하는문자열 ', 컬럼명) FROM 테이블명;
+-- 원하는문자열 컬럼내용
+
+CONCAT_WS(S, ...): 괄호 안의 내용 S로 이어붙임
+ex)
+CONCAT_WS('-', 2021, 8, 15, 'AM')
+-- 2021-8-15-AM
+ex)
+SELECT
+  CONCAT_WS(' ', FirstName, LastName) AS FullName
+FROM Employees;
+/* FullName
+Nancy Davolio
+Andrew Fuller
+Janet Leverling
+*/
 
 # locate()
 - 문자열 내에서 찾는 문자열이 처음으로 나타나는 위치를 찾아서 해당 위치를 반환
@@ -248,11 +270,31 @@ select length('asdfewfe')
 ex) abc가 어느 위치에 있는 지
 select locate('abc', 'asdfsdabc');
 
-# left(), right()
+# left(), right(), SUBSTR()
 - 문자열의 왼쪽 또는 오른쪽부터 지정한 개수만큼의 문자를 반환
 ex)
-select left('left on route', 5),
-right('left on route', 5);
+select left(컬럼명, 5),
+right(컬럼명, 5);
+ex)
+SELECT
+  SUBSTR('ABCDEFG', 3),
+  SUBSTR('ABCDEFG', 3, 2),
+  SUBSTR('ABCDEFG', -4),
+  SUBSTR('ABCDEFG', -4, 2);
+-- CDEFG, CD, DEFG, DE
+ex)
+SELECT
+  OrderDate,
+  LEFT(OrderDate, 4) AS Year,
+  SUBSTR(OrderDate, 6, 2) AS Month,
+  RIGHT(OrderDate, 2) AS Day
+FROM Orders;
+/*
+OrderDate	Year	Month	Day
+1996-07-04	1996	07	    04
+1996-07-05	1996	07	    05
+*/
+
 
 # LOWER(), UPPER()
 - 문자열의 문자를 모두 소문자 또는 대문자로 변경
@@ -262,10 +304,16 @@ upper('Left On Route');
 
 # replace()
 - 문자열에서 특정 문자열을 대체 문자열로 교체
-ex)MSSQL에서 MS라는 문자를 My로 변경
-select replace('MSSQL', 'MS', 'My');
+ex)Description 컬럼에서 ', '를 ' and '로 변경
+SELECT
+  REPLACE(Description, ', ', ' and ')
+FROM Categories;
+/*
+REPLACE(Description, ', ', ' and ')
+Soft drinks and coffees and teas and beers and ales
+*/
 
-# trim()
+# trim(), 
 - 문자열의 앞이나 뒤, 또는 양쪽 모두에 있는 특정 문자를 제거
 - trim() 함수에서 사용할 수 있는 지정자
  - both: 전달받은 문자열의 양 끝에 존재하는 특정문자를 제거(디폴트)
@@ -276,6 +324,48 @@ ex)
 select trim('             MySQL           '),
 trim(leading '#' from '###MySQL###'),
 trim(trailing '#' from '###MySQL###');
+# LTRIM(): 왼쪽 공백 제거, RTRIM(): 오른쪽 공백 제거
+ex)
+SELECT
+  CONCAT('|', ' HELLO ', '|'), -- | HELLO |
+  CONCAT('|', LTRIM(' HELLO '), '|'), -- |HELLO |
+  CONCAT('|', RTRIM(' HELLO '), '|'), -- | HELLO|
+  CONCAT('|', TRIM(' HELLO '), '|'); -- |HELLO|
+  
+#LPAD(S, N, P): S가 N글자가 될 때까지 P를 이어붙임 
+#RPAD(S, N, P): S가 N글자가 될 때까지 P를 이어붙임
+ex)
+SELECT
+  LPAD(SupplierID, 5, 0),
+  RPAD(Price, 6, 0)
+FROM Products;
+/*
+LPAD(SupplierID, 5, 0)	RPAD(Price, 6, 0)
+00001					18.000
+00001					19.000
+*/
+
+# INSTR(S, s): S중 s의 첫 위치 반환, 없을 시 0
+ex)
+SELECT
+  INSTR('ABCDE', 'ABC'), -- 1
+  INSTR('ABCDE', 'BCDE'), -- 2
+  INSTR('ABCDE', 'C'), -- 3
+  INSTR('ABCDE', 'DE'), -- 4
+  INSTR('ABCDE', 'F'); -- 0
+  
+# CAST(A, T): A를 T 자료형으로 변환(dtype변경)
+ex)
+SELECT
+  '01' = '1',
+  CONVERT('01', DECIMAL) = CONVERT('1', DECIMAL);
+/*
+'01' = '1'	CONVERT('01', DECIMAL) = CONVERT('1', DECIMAL)
+     0	                           1
+*/
+
+# 더 많은 문자열 함수
+https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
 ```
 
 ### 수학
@@ -307,6 +397,52 @@ ex) select sin(pi()/2), cos(pi()), tan(pi()/4);
 - abs(): 절대값 반환
 - rand(): 0.0 <= x < 1인 실수 x를 랜덤으로 반환
 ex) select abs(-3), rand(), round(rand()*100, 0);
+
+# GREATEST, LEAST
+- (괄호 안에서)가장 큰 값, (괄호 안에서)가장 작은 값 반환
+ex)
+SELECT 
+  GREATEST(1, 2, 3), -- 3 반환
+  LEAST(1, 2, 3, 4, 5); -- 1 반환
+ex) 컬럼들 중에서 가장 큰 값, 가장 작은 값 반환
+SELECT
+  컬럼1, 컬럼2, 컬럼3, -- 비교 해보기 위해 삽입
+  GREATEST(컬럼1, 컬럼2, 컬럼3),
+  LEAST(컬럼1, 컬럼2, 컬럼3)
+FROM 테이블명;
+
+# 그룹 함수 - 조건에 따라 집계된 값을 가져옴
+MAX	가장 큰 값
+MIN	가장 작은 값
+COUNT 개수(NULL값 제외)
+SUM	총합
+AVG	평균 값
+ex)
+SELECT
+  MAX(컬럼명),
+  MIN(컬럼명),
+  COUNT(컬럼명),
+  SUM(컬럼명),
+  AVG(컬럼명)
+FROM 테이블명
+WHERE 컬럼명 BETWEEN 20 AND 30; -- 이 부분은 없어도 됨: 이 구간 내에서 구해달라할 때 사용
+
+POW(A, B), POWER(A, B)	A를 B만큼 제곱
+SQRT 제곱근
+ex)
+SELECT
+  POW(2, 3),
+  POWER(5, 2),
+  SQRT(16);
+  
+TRUNCATE(N, n)	N을 소숫점 n자리까지 선택
+- n에 음수를 넣으면 그 수 만큼 0을 넣음
+ex)
+SELECT 컬럼명 FROM 테이블명
+WHERE TRUNCATE(컬럼명, 0) = 12;
+
+# 더 많은 숫자 함수
+https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html
 ```
 
 ### 날짜
