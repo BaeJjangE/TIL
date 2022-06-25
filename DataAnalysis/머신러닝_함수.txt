@@ -7,7 +7,7 @@ ex) all_df = pd.concat([X_train.assign(ind="train"), X_test.assign(ind="test")])
 ex) 1. df.apply(lambda x:np.square(x) if x.name in ['A','B'] else x)
      2. X_train[cat_features] = X_train[cat_features].apply(le.fit_transform)
 
-*get_dummies -> LabelEncoder 대신 사용하는 경우: 1, 2, 3 으로 나오고 관계를 1+2=3으로 학습 -> 그러므로 이러한 관계가 아닐 경우 사용
+*get_dummies -> LabelEncoder 대신사용하는 경우: 1, 2, 3 으로 나오고 관계를 1+2=3으로 학습 -> 그러므로 이러한 관계가 아닐 경우 사용
 ex) X_train = pd.get_dummies(X_train, columns = categorical변수)
      X_test = pd.get_dummies(X_test, columns = 카테고리칼변수)
 
@@ -107,11 +107,5 @@ try:
     X_train.drop(del1, axis=0, inplace=True)
     X_train.drop(del2, axis=0, inplace=True)
     X_train.drop(del3, axis=0, inplace=True)
-except:
-    pass
-try:
-    y_train.drop(del1, axis=0, inplace=True)
-    y_train.drop(del2, axis=0, inplace=True)
-    y_train.drop(del3, axis=0, inplace=True)
 except:
     pass
