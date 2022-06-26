@@ -454,22 +454,51 @@ https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html
 - curtime(): 현재 시간
 ex) select now(), curdate(), curtime();
 
-# date(), month(), day(), hour(), minute(), second()
+# date(), time(), year(), month(), day(), hour(), minute(), second()
+# monthname(), weekday(), dayname()
+DATE: 문자열에 따라 날짜 생성
+TIME: 문자열에 따라 시간 생성
 ex)
-select
-date(now()), 
-month(now()),
-day(now()),
-hour(now()),
-minute(now()),
-second(now());
+SELECT
+  '2021-6-1' = '2021-06-01', -- 0
+  DATE('2021.6.1') = DATE('2021-06-01'), -- 1
+  '1:2:3' = '01:02:03', -- 0
+  TIME('1:2:3') = TIME('01:02:03'); -- 1
+ex)
+SELECT * FROM Orders
+WHERE
+  OrderDate BETWEEN DATE('1997-1-1') AND DATE('1997-1-31');
 
-# monthname(), dayname()
-- 월 이름, 요일 이름 반환
+YEAR: 주어진 DATETIME값의 년도 반환
+MONTHNAME: 주어진 DATETIME값의 월(영문) 반환
+MONTH: 주어진 DATETIME값의 월 반환
+WEEKDAY: 주어진 DATETIME값의 요일값 반환(월요일: 0)
+DAYNAME: 주어진 DATETIME값의 요일명 반환
+DAY: 주어진 DATETIME값의 날짜(일) 반환
 ex)
-select
-monthname(now()),
-dayname(now());
+SELECT
+  OrderDate,
+  YEAR(OrderDate) AS YEAR,
+  MONTHNAME(OrderDate) AS MONTHNAME,
+  MONTH(OrderDate) AS MONTH,
+  WEEKDAY(OrderDate) AS WEEKDAY,
+  DAYNAME(OrderDate) AS DAYNAME,
+  DAY(OrderDate) AS DAY
+FROM Orders;
+/*
+OrderDate	YEAR	MONTHNAME	MONTH	WEEKDAY	 DAYNAME	DAY
+1996-07-04	1996	July	    7	    3	    Thursday    4
+*/
+ex) 조건문으로도 사용가능
+SELECT * FROM Orders
+WHERE WEEKDAY(OrderDate) = 0; -- 월요일만 뽑기
+
+HOUR	주어진 DATETIME의 시 반환
+MINUTE	주어진 DATETIME의 분 반환
+SECOND	주어진 DATETIME의 초 반환
+ex) 현재 시간, 분, 초 반환
+SELECT
+  HOUR(NOW()), MINUTE(NOW()), SECOND(NOW());
 
 # dayofweek(), dayofmonth(), dayofyear()
 - 1~7(일~토요일),    0~31    , 1~366 반환
@@ -479,12 +508,107 @@ dayofweek(now()),
 dayofmonth(now()),
 dayofyear(now());
 
-# date_format()
-- 전달받은 형식에 맞춰 날짜와 시간 정보를 문자열로 반환
+# ADDDATE, SUBDATE
+ADDDATE, DATE_ADD: 시간/날짜 더하기
+SUBDATE, DATE_SUB: 시간/날짜 빼기
 ex)
-select
-date_format(now(), '%D %y %a %d %m %n %j');
+SELECT 
+  ADDDATE('2021-06-20', INTERVAL 1 YEAR), -- 2022-06-20 1년 후
+  ADDDATE('2021-06-20', INTERVAL -2 MONTH), -- 2021-04-20 2달 전
+  ADDDATE('2021-06-20', INTERVAL 3 WEEK), -- 2021-07-11	3주 후
+  ADDDATE('2021-06-20', INTERVAL -4 DAY), -- 2021-06-16	4일 전
+  ADDDATE('2021-06-20', INTERVAL -5 MINUTE), -- 2021-06-19 5분 전
+  ADDDATE('2021-06-20 13:01:12', INTERVAL 6 SECOND); -- 23:55:00 2021-06-20 13:01:18
+  
+# DATE_DIFF, TIME_DIFF
+DATE_DIFF: 두 시간/날짜 간 일수차
+TIME_DIFF: 두 시간/날짜 간 시간차
+ex)
+SELECT
+  OrderDate,
+  NOW(),
+  DATEDIFF(OrderDate, NOW()) -- 위치바꾸면 양수로 출력 or ABS() 넣으면 양수로 출력
+FROM Orders;
+/*
+OrderDate	NOW()	            DATEDIFF(OrderDate, NOW())
+1996-07-04	2022-06-26 01:48:47	-9488 -- 9488일 차이 난다 /
+*/
+
+# LAST_DAY:	해당 달의 마지막 날짜
+ex)
+SELECT
+  OrderDate, -- 1996-07-04
+  LAST_DAY(OrderDate), -- 1996-07-31
+  DAY(LAST_DAY(OrderDate)), -- 31
+  DATEDIFF(LAST_DAY(OrderDate), OrderDate) -- 27
+FROM Orders;
+
+#★ date_format()
+- 전달받은 형식에 맞춰 날짜와 시간 정보를 문자열로 반환
+형식	설명
+%Y	 년도 4자리
+%y   년도 2자리
+%M	월 영문
+%m	월 숫자
+%D	일 영문(1st, 2nd, 3rd...)
+%d, %e	일 숫자 (01 ~ 31)
+%T	hh:mm:ss
+%r	hh:mm:ss AM/PM
+%H, %k	시 (~23)
+%h, %l	시 (~12)
+%i	분
+%S, %s	초
+%p	AM/PM
+ex)
+SELECT
+  DATE_FORMAT(NOW(), '%M %D, %Y %T'), -- June 26th, 2022 02:01:05	
+  DATE_FORMAT(NOW(), '%y-%m-%d %h:%i:%s %p'), -- 22-06-26 02:01:05 AM	
+  DATE_FORMAT(NOW(), '%Y년 %m월 %d일 %p %h시 %i분 %s초'); -- 2022년 06월 26일 AM 02시 01분 05초
+ex) 응용
+SELECT REPLACE(
+  REPLACE(
+    DATE_FORMAT(NOW(), '%Y년 %m월 %d일 %p %h시 %i분 %초'),
+    'AM', '오전'
+  ),
+  'PM', '오후'
+)
+-- 2022년 06월 26일 오전 02시 03분 초
+
+# TR _ TO _ DATE(S, F): S를 F형식으로 해석하여 시간/날짜 생성
+ex)
+SELECT
+  STR_TO_DATE('1997-01-01 13:24:35', '%Y-%m-%d %T')
+-- 1997-01-01 13:24:35
+
+# 더 많은 날짜 함수
+https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
 ```
+
+### 기타 함수
+
+```mysql
+# IF, CASE
+IF(조건, T, F): 조건이 참이라면 T, 거짓이면 F 반환
+CASE: 좀 더 복잡한 조건문
+ex)
+SELECT
+  Price, -- 18.00
+  IF (Price > 30, 'Expensive', 'Cheap'),  -- Cheap
+  CASE
+    WHEN Price < 20 THEN '저가'
+    WHEN Price BETWEEN 20 AND 30 THEN '일반'
+    ELSE '고가'
+  END -- 저가
+FROM Products;
+
+#
+ex)IFNULL(A, B): A가 NULL일 시 B 출력, 아니면 A 출력
+SELECT
+  IFNULL('A', 'B'), -- A
+  IFNULL(NULL, 'B'); -- B
+```
+
+
 
 ## SQL 고급
 
