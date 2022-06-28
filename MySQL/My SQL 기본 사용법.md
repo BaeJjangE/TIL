@@ -165,9 +165,12 @@ order by CountryCode ASC, Population DESC
 # DISTINCT
 - 중복된 것은 1개씩만 보여주면서 출력
 - 테이블의 크기가 클수록 효율적
+- GROUP BY 와 달리 집계함수가 사용되지 않습니다.
+- GROUP BY 와 달리 정렬하지 않으므로 더 빠릅니다.
 ex)
-select distinct CountryCode
-from city;
+SELECT DISTINCT Country, City -- 두 컬럼도 사용 가능
+FROM Customers
+ORDER BY Country, City;
 
 # LIMIT
 - 출력 개수를 제한
@@ -181,7 +184,7 @@ Limit 0, 10 -- 0부터 10개까지, 만약 30, 10으로 쓰면 30부터 10개 �
 
 # GROUP BY
 - 그룹으로 묶어주는 역할
-- '집계함수'를 함께 사용
+- '집계함수'를 함께 사용: NULL값 제외
  - AVG()
  - MIN()
  - MAX()
@@ -197,7 +200,7 @@ from city
 group by CountryCode
 
 # HAVING
-- where과 비슷한 개념으로 조건 제한
+- WHERE는 그룹하기 전 데이터, HAVING은 그룹 후 집계에 사용
 - 집계 함수에 대해서 조건 제한하는 편리한 개념
 - HAVING절은 반드시 GROUP BY절 다음에 나와야함
 ex)
@@ -206,9 +209,10 @@ from city
 group by CountryCode
 Having MAX(Population) > 8000000
 
-# ROLL UP
+# WITH ROLLUP
 - 총합 또는 중간합계가 필요할 경우 사용
 - GROUP BY절과 함께 WITH ROLLUP문 사용
+- ★ ORDER BY 와는 함께 사용될 수 없습니다.
 ex)
 select CountryCode, Name,sum(Population)
 from city

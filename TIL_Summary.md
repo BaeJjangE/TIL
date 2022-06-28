@@ -1,4 +1,19 @@
 # Today I Learn Summary
+2022-06-28
+
+```markdown
+### 최종 프로젝트
+- 2022 날씨 빅데이터 콘테스트
+
+### 면접 준비
+
+### MySQL
+- 얄팍한 코딩사전)왕초보용! 갖고 노는 MySQL 데이터베이스 강좌 1-5. 조건에 따라 그룹으로 묶기
+
+### 기타
+- Power BI & Excel BI) Power BI와 Excel의 기능 비교
+```
+
 2022-06-27
 
 ```markdown
