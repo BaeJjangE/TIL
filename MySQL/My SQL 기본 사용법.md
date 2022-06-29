@@ -120,39 +120,7 @@ ex) '%'사용: 어떤 것이든 올 수 있음
 select *
 FROM city
 where CountryCode LIKE 'K%'
-
-# 서브 쿼리
-- 쿼리문 안에 또 쿼리문이 들어 있는 것
-- 서브 쿼리의 결과가 둘 이상이 되면 에러 발생
-ex) Name 컬럼에 'seoul'인건 알겠는 데,
-	그게 CountryCode가 뭐지 했을 때
-select *
-FROM city
-where CountryCode = (	
-    select CountryCode
-	From city
-    where name = 'seoul'	);
-    
-# ANY
-- 서브쿼리의 여러 개의 결과 중 한 가지만 만족해도 가능
-- SOME은 ANY와 동일한 의미로 사용
-- =ANY 구문은 IN과 동일한 의미
-ex) any안에 있는 어떠한 값보다 작을('<') 경우
-select *
-FROM city
-where Population < any (	select Population
-							From city
-							where District = 'New York'	);
-							
-# ALL
-- 서브쿼리의 여러 개의 결과를 모두 만족 해야함
-ex) ALL 안에서 가장 높은 값보다 위인 경우
-select *
-FROM city
-where Population > ALL (	select Population
-							From city
-							where District = 'New York'	);	
-							
+    				
 # Order by
 - 결과가 출력되는 순서를 조절하는 구문
 - 디폴트: 오름차순 열이름 뒤에 ASC(생략가능)
@@ -229,6 +197,88 @@ select *
 from city
 join country on city.CountryCode = country.Code
 join countrylanguage on city.CountryCode = countrylanguage.CountryCode;
+```
+
+### 서브쿼리
+
+```mysql
+- 쿼리문 안에 또 쿼리문이 들어 있는 것
+
+# 비상관 서브쿼리
+- 메인 쿼리와 내부 쿼리들이 독자적으로 실행하는 것
+- 서브 쿼리의 결과가 둘 이상이 되면 에러 발생
+ex) Name 컬럼에 'seoul'인건 알겠는 데,
+	그게 CountryCode가 뭐지 했을 때
+select *
+FROM city
+where CountryCode = (	
+    select CountryCode
+	From city
+    where name = 'seoul');
+ex)
+SELECT
+  CategoryID, CategoryName, Description
+FROM Categories
+WHERE
+  CategoryID =
+  (SELECT CategoryID FROM Products
+  WHERE ProductName = 'Chais');
+ex)
+SELECT
+  CategoryID, CategoryName, Description
+FROM Categories
+WHERE
+  CategoryID IN
+  (SELECT CategoryID FROM Products
+  WHERE Price > 50);
+
+# ANY
+- 서브쿼리의 여러 개의 결과 중 '한 가지만' 만족해도 가능
+- ~ ANY	서브쿼리의 하나 이상의 결과에 대해 ~하다
+- SOME은 ANY와 동일한 의미로 사용
+- =ANY 구문은 IN과 동일한 의미
+ex) any 안에 있는 어떠한 값보다 작을 경우
+select *
+FROM city
+where Population < any (	select Population
+							From city
+							where District = 'New York'	);
+							
+# ALL
+- 서브쿼리의 여러 개의 결과를 '모두' 만족 해야함
+- ~ ALL	서브쿼리의 모든 결과에 대해 ~하다
+ex) ALL 안에서 가장 높은 값보다 위인 경우
+select *
+FROM city
+where Population > ALL (	select Population
+							From city
+							where District = 'New York'	);	
+							
+# 상관 서브쿼리
+- 메인쿼리와 내부쿼리가 맞물려져서 돌아감
+ex)
+SELECT
+  ProductID, ProductName,
+  (
+    SELECT CategoryName FROM Categories C(원하는이름)
+    WHERE C.CategoryID = P.CategoryID
+  ) AS CategoryName
+FROM Products P(원하는이름);
+
+# EXIST / NOT EXISTS 연산자
+- 존재하는 값 추출
+ex)
+SELECT
+  CategoryID, CategoryName
+   ,(SELECT MAX(P.Price) FROM Products P
+   WHERE P.CategoryID = C.CategoryID
+  ) AS MaxPrice
+FROM Categories C
+WHERE EXISTS (
+  SELECT * FROM Products P
+  WHERE P.CategoryID = C.CategoryID
+  AND P.Price > 80
+);
 ```
 
 ## MySQL 내장 함수
