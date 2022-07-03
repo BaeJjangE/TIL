@@ -188,7 +188,8 @@ group by CountryCode, Name WITH rollup
 
 # JOIN
 - 데이터베이스 내의 여러 테이블에서 가져온 레코드를 조합하여 하나의 테이블이나 결과 집합으로 표현
-ex)city.CountryCode = country.Code가 같은 것을 기준으로 조인
+- 기본: "inner"
+ex)city테이블 기준으로 inner, city.CountryCode = country.Code가 같은 것을 기준으로 조인
 select *
 from city
 join country ON city.CountryCode = country.Code;
@@ -197,6 +198,11 @@ select *
 from city
 join country on city.CountryCode = country.Code
 join countrylanguage on city.CountryCode = countrylanguage.CountryCode;
+ex)
+SELECT C.CategoryID, C.CategoryName, P.ProductName
+FROM Categories C
+JOIN Products P 
+  ON C.CategoryID = P.CategoryID; 
 ```
 
 ### 서브쿼리
