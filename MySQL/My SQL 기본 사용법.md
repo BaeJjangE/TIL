@@ -203,6 +203,26 @@ SELECT C.CategoryID, C.CategoryName, P.ProductName
 FROM Categories C
 JOIN Products P 
   ON C.CategoryID = P.CategoryID; 
+  
+# UNION
+- 중복을 제거한 집합
+ex) 두 테이블을 합치는 데, 4개 컬럼으로 만들어서 열방향으로 합침
+SELECT CustomerName AS Name, City, Country, 'CUSTOMER'
+FROM Customers
+UNION
+SELECT SupplierName AS Name, City, Country, 'SUPPLIER'
+FROM Suppliers
+ORDER BY Name;
+ex) 합집합: 중복제거
+SELECT CategoryID AS ID FROM Categories
+WHERE CategoryID > 4
+UNION (이 자리에 ALL 을 넣어주면 중복포함)
+SELECT EmployeeID AS ID FROM Employees
+WHERE EmployeeID % 2 = 0;
+
+-- UNION ALL로 바꿔볼 것
+# UNION ALL
+- 중복을 제거하지 않은 집합
 ```
 
 ### 서브쿼리
@@ -667,8 +687,6 @@ SELECT
   IFNULL('A', 'B'), -- A
   IFNULL(NULL, 'B'); -- B
 ```
-
-
 
 ## SQL 고급
 
