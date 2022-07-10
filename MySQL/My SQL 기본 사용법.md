@@ -708,7 +708,31 @@ create table test2 (
 	col2 float null,
 	col3 varchar(45) null
     );
-    
+
+# 테이블 생성시 제약 넣기
+CREATE TABLE people (
+  person_id INT AUTO_INCREMENT PRIMARY KEY,
+  person_name VARCHAR(10) NOT NULL,
+  nickname VARCHAR(10) UNIQUE NOT NULL,
+  age TINYINT UNSIGNED,
+  is_married TINYINT DEFAULT 0
+);
+/*
+제약	설명
+AUTO_INCREMENT	새 행 생성시마다 자동으로 1씩 증가
+PRIMARY KEY	중복 입력 불가, NULL(빈 값) 불가
+UNIQUE	중복 입력 불가
+NOT NULL	NULL(빈 값) 입력 불가
+UNSIGNED	(숫자일시) 양수만 가능
+DEFAULT	값 입력이 없을 시 기본값
+
+💡PRIMARY KEY (기본키)
+테이블마다 하나만 가능
+기본적으로 인덱스 생성 (기본키 행 기준으로 빠른 검색 가능)
+보통 AUTO_INCREMENT와 함께 사용
+⭐ 각 행을 고유하게 식별 가능 - 테이블마다 하나씩 둘 것
+*/
+
 # alter table 테이블이름
 - 테이블 수정
 ex) col4 컬럼 더하기
@@ -792,9 +816,12 @@ ex) drop view testview
 - 값 넣기
 - 테이블 이름 다음에 나오는 열 생략 가능
 - 생략할 경우에 value 다음에 나오는 값들의 순서 및 개수가 테이블이 컬럼 수와 같아야함
-ex)
+ex) 여러 값 삽입 가능
 insert into 테이블명(컬럼이름1, 컬럼이름2, ..., 컬럼이름n)
-value(값1, 값2, 값3, 값4);
+values
+  (값1, 값2, 값3, 값4)
+  (값1, 값2, 값3, 값4)
+  (값1, 값2, 값3, 값4);
 - workbench에서는 직접 표에 값넣고 apply 버튼 눌러줘도 됨
 
 # insert into select
