@@ -448,6 +448,60 @@ SELECT
 https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
 ```
 
+### 자료형
+
+```mysql
+1. 숫자 자료형
+1-1. 정수
+자료형		바이트	 SIGNED							UNSIGNED
+TINYINT		1	 -128 ~ 127						0 ~ 255
+SMALLINT	2	 -32,768 ~ 32,767				0 ~ 65,535
+MEDIUMINT	3	 -8,388,608 ~ 8,388,607			 0 ~ 16,777,215
+INT			4	 -2,147,483,648 ~ 2,147,483,647  0 ~ 4,294,967,295
+BIGINT		8	 -2^63 ~ 2^63 - 1				0 ~ 2^64 - 1
+
+1-2. 실수
+️🔗 고정 소수점(Fixed Point) 수
+- 좁은 범위의 수 표현 가능, 정확한 값
+자료형	 		 설명										     범위
+DECIMAL( s, d )	실수 부분 총 자릿수( s ) & 소수 부분 자릿수 ( d )	 s 최대 65
+
+️🔗 부동 소수점(Floating Point) 수
+- 넓은 범위의 수 표현 가능, 정확하지 않은 값 (일반적으로 충분히 정확)
+- x의 몇승으로 표현되는 수
+자료형	  바이트 	  표현 범위
+FLOAT	4바이트	-3.402...E+38 ~ -1.175...E-38 , 0 , 1.175...E-38 ~ 3.402...E+38
+DOUBLE	8바이트	-1.797...E+308 ~ -2.225E-308 , 0 , 2.225...E-308 ~ 1.797...E+308
+
+2. 문자 자료형
+️🔗 문자열
+https://dev.mysql.com/doc/refman/8.0/en/char.html
+- 위 링크에서 Storage Required 관련 표 비교
+자료형	설명	차지하는 바이트	최대 바이트
+CHAR( s )	고정 사이즈 (남는 글자 스페이스로 채움)	s (고정값)	255
+VARCHAR ( s )	가변 사이즈	실제 글자 수[최대 s] + 1 [글자수 정보]	65,535
+- 검색시 CHAR가 더 빠름
+- VARCHAR 컬럼 길이값이 4글자보다 적을 경우 CHAR로 자동 변환
+
+️🔗 텍스트
+자료형		최대 바이트 크기
+TINYTEXT	255
+TEXT		65,535
+MEDIUMTEXT	16,777,215
+LONGTEXT	4,294,967,295
+
+3. 시간 자료형
+자료형		  설명				   비고
+DATE		YYYY-MM-DD	
+TIME		HHH:MI:SS			   HHH: -838 ~ 838까지의 시간
+DATETIME	YYYY-MM-DD HH:MI:SS		입력된 시간을 그 값 자체로 저장
+TIMESTAMP	YYYY-MM-DD HH:MI:SS		MySQL이 설치된 컴퓨터의 시간대를 기준으로 저장
+- 시간 데이터를 가감없이 기록할 때 DATETIME
+- 시간 자동기록, 국제적인 서비스를 할 경우 TIMESTAMP 사용
+```
+
+
+
 ### 수학
 
 ```mysql
@@ -831,7 +885,7 @@ insert into test2 select * from test;
 
 # update
 - 기존에 입력되어 있는 값을 변경
-- 중요!! where절 생략 가능하나 테이블의 전체 행의 내용 변경
+- ★중요!! where절 생략 가능하나 테이블의 전체 행의 내용 변경
 ex) 컬럼 값 기준으로
 update test2
 set col1=1, col2=9999, col3='test2'
@@ -839,7 +893,7 @@ where 컬럼 = 값;
 
 # delete
 - 행 단위로 데이터 삭제
-- 중요!! where을 써야 전체가 삭제안됨
+- ★중요!! where을 써야 전체가 삭제안됨
 - 휴지통 개념으로 살리기 가능하므로 용량이 줄어들지 않음
 ex)
 delete from test2
@@ -848,6 +902,7 @@ where id = 1;
 # truncate
 - 용량이 줄어들고 모두 삭제
 - 되돌릴 수 없음
+- delete와는 달리 테이블 초기화됨
 ex)
 truncate table test2;
 

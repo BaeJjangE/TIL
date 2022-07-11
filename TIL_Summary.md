@@ -1,4 +1,25 @@
 # Today I Learn Summary
+2022-07-11
+
+```markdown
+### 입사 준비 및 집 알아보기
+
+### MySQL
+- 3-3. 자료형
+- 3-4. 데이터 변경, 삭제하기
+
+### Excel
+- 쉽고 빠르게 익히는 Excel 파워 피벗과 데이터 모델링
+ - 파워 피벗과 데이터 모델링 과정 소개
+ - 엑셀 BI의 이해
+ - 파워 피벗의 이해
+ - 파워 피벗 사용을 위한 준비 사항
+ 
+ ### 기타
+ - 메이븐 다이나믹러닝 센터 홍보 동영상
+ - Decimal/Float, Char/Varchar/Text/Blob, Datetime/Timestamp - MySQL의 헷갈리는 자료형들
+```
+
 2022-07-10
 
 ```markdown
