@@ -1,4 +1,29 @@
 # Today I Learn Summary
+2022-07-12
+
+```markdown
+### 입사 준비 및 집 알아보기
+
+### Power BI
+- 데이터 시각화와 탐색 with POWER BI
+ - Power BI 시작하기
+ - Power BI 콘텐츠
+ - Power BI 서비스
+ - Power BI 라이선스, 참고
+ - Power BI Desktop 설치
+ - Power BI Desktop 화면구성
+ - Power BI 옵션
+
+### Excel
+- 쉽고 빠르게 익히는 Excel 파워 피벗과 DAX
+ - 엑셀 파워 피벗 & DAX 과정 소개 
+ - DAX의 이해
+ - 측정값 생성 실습
+
+### 기타
+- 근로계약서 작성 주의사항 / 근로계약서 내용 분석
+```
+
 2022-07-11
 
 ```markdown
